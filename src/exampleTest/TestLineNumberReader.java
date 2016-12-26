@@ -14,6 +14,11 @@ public class TestLineNumberReader {
     public static void main(String[] args) throws FileNotFoundException {
         LineNumberReader lineNumberReader=new LineNumberReader(new FileReader("testDataOutPutStream.txt"));
         try {
+            out.println(lineNumberReader.getLineNumber());
+            out.println(lineNumberReader.readLine());
+            out.println(lineNumberReader.getLineNumber());
+            out.println(lineNumberReader.skip(1));
+            out.println(lineNumberReader.getLineNumber());
             out.println(lineNumberReader.readLine());
         } catch (IOException e) {
             e.printStackTrace();

@@ -12,6 +12,10 @@ public class TestDataInputStream {
             dataOutputStream=new DataOutputStream(new FileOutputStream("testDataOutPutStream.txt"));
             dataOutputStream.writeChars("chen");
             dataOutputStream.writeUTF("陈海燕");
+            dataOutputStream.write("\r\n".getBytes());
+            dataOutputStream.writeUTF("陈海燕 is really  great");
+            dataOutputStream.write("\r\n".getBytes());
+            dataOutputStream.writeUTF("haiyanchen  is really  great man");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -28,6 +32,8 @@ public class TestDataInputStream {
         System.out.println(dataInputStream.readChar());
         System.out.println(dataInputStream.readChar());
         System.out.println(dataInputStream.readUTF());
+        System.out.println(dataInputStream.readUTF());
+
 
     }
 }
