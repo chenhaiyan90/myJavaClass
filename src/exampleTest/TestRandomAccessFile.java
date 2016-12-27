@@ -28,7 +28,7 @@ public class TestRandomAccessFile {
 
             // 将文件指针移到第二个Int值后
             randomAccessFile.seek(2*4);
-            // 覆盖第三个Int值
+            // 覆盖第三个Int值qqq
             randomAccessFile.writeInt(6);
 
             // 文件指针指向文件开头
