@@ -1,5 +1,7 @@
 package homework2;
 
+import java.util.Arrays;
+
 /**
  * Created by chenhaiyan on 2016/12/19.
  */
@@ -34,6 +36,15 @@ public class Salary {
 
     public Salary() {
         super();
+    }
+
+    @Override
+    public String toString() {
+        return "Salary{" +
+                "name=" + Arrays.toString(name) +
+                ", baseSalary=" + baseSalary +
+                ", bonus=" + bonus +
+                '}';
     }
 
     public Salary(byte[] name, int baseSalary, int bonus) {
