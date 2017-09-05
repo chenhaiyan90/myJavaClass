@@ -1,0 +1,6 @@
+{"userName":chenhaiyan9,"userId":63,"sessionId":chenhaiyan9Sun Aug 20 00:14:45 CST 2017,"createTime":1503159285964,"validSeconds":3000}
+{"userName":chenhaiyan8,"userId":52,"sessionId":chenhaiyan8Sun Aug 20 00:14:45 CST 2017,"createTime":1503159285985,"validSeconds":3000}
+{"userName":chenhaiyan3,"userId":91,"sessionId":chenhaiyan3Sun Aug 20 00:14:45 CST 2017,"createTime":1503159285989,"validSeconds":3000}
+{"userName":chenhaiyan9,"userId":45,"sessionId":chenhaiyan9Sun Aug 20 09:12:42 CST 2017,"createTime":1503191562864,"validSeconds":3000}
+{"userName":chenhaiyan8,"userId":8,"sessionId":chenhaiyan8Sun Aug 20 09:12:42 CST 2017,"createTime":1503191562896,"validSeconds":3000}
+{"userName":chenhaiyan3,"userId":79,"sessionId":chenhaiyan3Sun Aug 20 09:12:42 CST 2017,"createTime":1503191562896,"validSeconds":3000}

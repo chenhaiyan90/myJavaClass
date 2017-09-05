@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://D:\myProject\javaProject\grab-master\grab.iml" filepath="D:\myProject\javaProject\grab-master\grab.iml" />
+      <module fileurl="file://D:\myProject\javaProject\grab-master\grab-batch\grab-batch.iml" filepath="D:\myProject\javaProject\grab-master\grab-batch\grab-batch.iml" />
+      <module fileurl="file://D:\myProject\javaProject\grab-master\grab-common\grab-common.iml" filepath="D:\myProject\javaProject\grab-master\grab-common\grab-common.iml" />
+      <module fileurl="file://D:\myProject\javaProject\grab-master\grab-web\grab-web.iml" filepath="D:\myProject\javaProject\grab-master\grab-web\grab-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/myJavaClass.iml" filepath="$PROJECT_DIR$/.idea/myJavaClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework3/spring-core-study/spring-boot-study.iml" filepath="$PROJECT_DIR$/src/springChapter/homework3/spring-core-study/spring-boot-study.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework2/spring-boot-study (1).iml" filepath="$PROJECT_DIR$/src/springChapter/homework2/spring-boot-study (1).iml" />
+    </modules>
+  </component>
+</project>

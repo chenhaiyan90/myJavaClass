@@ -1,6 +1,5 @@
 package homework7;
 
-import sun.dc.path.PathError;
 
 import java.io.File;
 import java.io.IOException;
@@ -8,8 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
@@ -17,7 +14,7 @@ import java.util.stream.Collectors;
 /**
  * Created by chenhaiyan on 2017/2/7.
  */
-public class SearchPath {
+public class Searchpath {
 
     public static void main(String[] args) throws IOException {
         ExecutorService executorService= Executors.newFixedThreadPool(1);
@@ -53,12 +50,5 @@ public class SearchPath {
             throw new RuntimeException("the file can't read");
         }
     }
-
 }
-class SearchResult implements Callable{
 
-    @Override
-    public Object call() throws Exception {
-        return null;
-    }
-}
