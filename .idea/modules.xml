@@ -6,9 +6,12 @@
       <module fileurl="file://D:\myProject\javaProject\grab-master\grab-batch\grab-batch.iml" filepath="D:\myProject\javaProject\grab-master\grab-batch\grab-batch.iml" />
       <module fileurl="file://D:\myProject\javaProject\grab-master\grab-common\grab-common.iml" filepath="D:\myProject\javaProject\grab-master\grab-common\grab-common.iml" />
       <module fileurl="file://D:\myProject\javaProject\grab-master\grab-web\grab-web.iml" filepath="D:\myProject\javaProject\grab-master\grab-web\grab-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/myJavaClass.iml" filepath="$PROJECT_DIR$/.idea/myJavaClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework4/homework4.iml" filepath="$PROJECT_DIR$/src/springChapter/homework4/homework4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework5/homework5.iml" filepath="$PROJECT_DIR$/src/springChapter/homework5/homework5.iml" />
+      <module fileurl="file://D:\myProject\javaProject\myJavaClass\src\springChapter\homework5.iml" filepath="D:\myProject\javaProject\myJavaClass\src\springChapter\homework5.iml" />
       <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework3/spring-core-study/spring-boot-study.iml" filepath="$PROJECT_DIR$/src/springChapter/homework3/spring-core-study/spring-boot-study.iml" />
-      <module fileurl="file://$PROJECT_DIR$/src/springChapter/homework2/spring-boot-study (1).iml" filepath="$PROJECT_DIR$/src/springChapter/homework2/spring-boot-study (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/spring_common/spring_common.iml" filepath="$PROJECT_DIR$/src/springChapter/spring_common/spring_common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/springChapter/spring_parent.iml" filepath="$PROJECT_DIR$/src/springChapter/spring_parent.iml" />
     </modules>
   </component>
 </project>

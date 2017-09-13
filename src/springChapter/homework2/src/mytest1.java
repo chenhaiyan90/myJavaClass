@@ -28,7 +28,7 @@ public class mytest1 {
         System.out.println(mytest1.dataSource_dev);
 
         mytest1 mytest2=new mytest1();
-        System.out.println(mytest1.dataSource_dev);
+        System.out.println(mytest2.dataSource_dev);
       /*  mytest1 mytest1=new mytest1();
         System.out.println(mytest1.getClass().getResource("/").getPath());
         System.setProperty("spring.profiles.active", "full_version");

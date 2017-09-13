@@ -9,8 +9,10 @@
         <module name="grab-batch" />
         <module name="grab-common" />
         <module name="grab-web" />
+        <module name="homework4" />
+        <module name="homework5" />
         <module name="spring-boot-study" />
-        <module name="spring-boot-study (1)" />
+        <module name="spring_common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -18,9 +20,14 @@
       <module name="grab-batch" target="1.7" />
       <module name="grab-common" target="1.7" />
       <module name="grab-web" target="1.7" />
+      <module name="homework4" target="1.8" />
+      <module name="homework5" target="1.8" />
+      <module name="leaderClass.spring" target="1.7" />
       <module name="leaderClassspring" target="1.5" />
       <module name="spring-boot-study" target="1.8" />
       <module name="spring-boot-study (1)" target="1.8" />
+      <module name="spring_common" target="1.8" />
+      <module name="spring_parent" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
