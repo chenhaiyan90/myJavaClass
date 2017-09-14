@@ -1,0 +1,1 @@
+ INSERT into `sp_course` (`name`,`mark`) VALUES ('ddd',55);

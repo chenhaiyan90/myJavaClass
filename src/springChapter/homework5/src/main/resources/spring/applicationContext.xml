@@ -1,0 +1,47 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd" default-lazy-init="true">
+	<bean id="propertyConfigurer"
+		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="fileEncoding" value="UTF-8"/>
+		<property name="locations">
+			<list>
+				<value>classpath:properties/context.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="commonDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		  init-method="init" destroy-method="close">
+		<description>
+			<![CDATA[ datasource configuration ]]>
+		</description>
+		<property name="driverClassName" value="${common.datasource.driverClassName}"/>
+		<property name="url" value="${common.dataSource.url}"/>
+		<property name="username" value="${common.datasource.username}"/>
+		<property name="password" value="${common.datasource.password}"/>
+		<!-- property name="filters" value="stat" / -->
+		<property name="maxActive" value="1000"/>
+		<property name="initialSize" value="50"/>
+		<property name="maxWait" value="60000"/>
+		<property name="minIdle" value="1"/>
+		<property name="timeBetweenEvictionRunsMillis" value="60000"/>
+		<property name="minEvictableIdleTimeMillis" value="300000"/>
+		<property name="testWhileIdle" value="true"/>
+		<property name="testOnBorrow" value="false"/>
+		<property name="testOnReturn" value="false"/>
+		<property name="validationQuery" value="select leader_course()"></property>
+		<property name="poolPreparedStatements" value="true"/>
+		<property name="maxOpenPreparedStatements" value="200"/>
+	</bean>
+
+	<bean id="commonJdbcTemplate" class="com.spring.common.config.JdbcTemplate">
+		<property name="dataSource" ref="commonDataSource"/>
+	</bean>
+
+	<context:component-scan base-package="com.spring.demo5" />
+
+</beans>

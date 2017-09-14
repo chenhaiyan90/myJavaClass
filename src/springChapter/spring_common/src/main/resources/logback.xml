@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration debug="false" scan="false">
+
+    <!-- 指定属性文件路径 -->
+    <property resource="properties/system.properties"/>
+    <contextName>${log.name}</contextName>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level %C [%M:%L] [%thread]- %msg%n</pattern>
+        </encoder>
+    </appender>
+
+
+    <!--&lt;!&ndash; 按照每天生成日志文件 &ndash;&gt;-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${log.path}/${log.name}.log</file>
+        <!--<Prudent>true</Prudent>-->
+        <append>true</append>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!--日志文件输出的文件名-->
+            <FileNamePattern>${log.path}/${log.name}.%d{yyyy-MM-dd}.log</FileNamePattern>
+            <MaxHistory>20</MaxHistory>
+        </rollingPolicy>
+        <encoder>
+            <!--格式化输出：%d表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度%msg：日志消息，%n是换行符-->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <discardingThreshold>0</discardingThreshold>
+        <queueSize>512</queueSize>
+        <appender-ref ref="FILE"/>
+    </appender>
+
+    <root level="${log.level}">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ASYNC"/>
+    </root>
+
+    <logger name="org.springframework" additivity="true" level="${log.level}"/>
+    <logger name="org.mybatis.spring" additivity="true" level="${log.level}"/>
+    <logger name="java.sql" additivity="true" level="${log.level}"/>
+    <logger name="logback" additivity="true" level="${log.level}"/>
+    <logger name="com.celt" additivity="true" level="${log.level}"/>
+
+</configuration>

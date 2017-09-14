@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.javalite:javalite-common:1.4.13.j7">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javalite/javalite-common/1.4.13.j7/javalite-common-1.4.13.j7.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javalite/javalite-common/1.4.13.j7/javalite-common-1.4.13.j7-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/javalite/javalite-common/1.4.13.j7/javalite-common-1.4.13.j7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

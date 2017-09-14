@@ -18,7 +18,7 @@ import java.sql.Statement;
 
 @Profile(value = "unit_test")
 @Configuration
-@PropertySource(value = "classpath:myapp-fullversion.properties")
+//@PropertySource(value = "classpath:myapp-fullversion.properties")
 public class MyConfigForUnitTest {
 	public MyConfigForUnitTest() {
 		System.out.println("@Configuration MyConfigForUnitTest created ");

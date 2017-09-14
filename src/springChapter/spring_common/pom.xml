@@ -91,10 +91,60 @@
       <version>6.0.5</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>${druid.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml</artifactId>
+      <version>3.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi-ooxml-schemas</artifactId>
+      <version>3.12</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.poi</groupId>
+      <artifactId>poi</artifactId>
+      <version>3.12</version>
+    </dependency>
+    <!-- zipkin请求链条追踪jar -->
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-core</artifactId>
+      <version>4.0.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.github.kristofa</groupId>
+      <artifactId>brave-spring-web-servlet-interceptor</artifactId>
+      <version>3.7.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>brave-core</artifactId>
+          <groupId>com.github.kristofa</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-core-spring</artifactId>
+      <version>4.0.6</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.zipkin.brave</groupId>
+      <artifactId>brave-apache-http-interceptors</artifactId>
+      <version>4.0.6</version>
+    </dependency>
   </dependencies>
 
   <properties>
     <springframework.version>4.3.3.RELEASE</springframework.version>
+    <druid.version>1.0.31</druid.version>
   </properties>
 
 

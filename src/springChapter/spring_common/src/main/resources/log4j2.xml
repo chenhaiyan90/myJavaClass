@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="off" monitorInterval="1800">
+
+    <Appenders>
+
+        <!-- 定义控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread] (%file:%line) - %msg%n"/>
+        </Console>
+
+        <RollingRandomAccessFile name="FILE"
+                                 fileName="${bundle:properties.system:log.path}/${bundle:properties.system:log.name}.log"
+                                 filePattern="${bundle:properties.system:log.path}/${bundle:properties.system:log.name}.%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread] (%file:%line) - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="20"/>
+        </RollingRandomAccessFile>
+
+        <!-- 定义控制台输出 -->
+        <RollingRandomAccessFile name="zipkin"
+                                 fileName="${bundle:properties.system:log.path}/zipkin.log"
+                                 filePattern="${bundle:properties.system:log.path}/zipkin.%d{yyyy-MM-dd}.log">
+            <PatternLayout pattern="%date{yyyy-MM-dd HH:mm:ss.SSS} %level [%thread] (%file:%line) - %msg%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy max="15"/>
+        </RollingRandomAccessFile>
+    </Appenders>
+
+    <Loggers>
+
+        <!-- pattern layout actually uses location, so we need to include it -->
+        <!--<AsyncLogger name="com.foo.Bar" level="info" includeLocation="true">-->
+        <!--<AppenderRef ref="zipkin"/>-->
+        <!--</AsyncLogger>-->
+
+        <asyncRoot level="${bundle:properties.system:log.level}" includeLocation="true">
+            <appender-ref ref="FILE"/>
+            <appender-ref ref="Console"/>
+        </asyncRoot>
+
+        <!-- 3rdparty Loggers -->
+        <logger name="org.springframework" additivity="true" level="${bundle:properties.system:log.level}"/>
+        <logger name="org.mybatis.spring" additivity="true" level="${bundle:properties.system:log.level}"/>
+        <logger name="java.sql" additivity="true" level="${bundle:properties.system:log.level}"/>
+        <logger name="com.celt" additivity="true" level="${bundle:properties.system:log.level}"/>
+        <logger name="org.apache.http" additivity="true" level="warn"/>
+        <logger name="org.jboss.netty" additivity="true" level="warn"/>
+        <logger name="org.springframework.data.redis" additivity="true" level="warn"/>
+        <logger name="org.springframework.web.servlet" additivity="true" level="warn"/>
+        <logger name="org.springframework.beans" additivity="true" level="warn"/>
+        <logger name="org.apache.activemq" additivity="true" level="warn"/>
+        <logger name="zipkin" additivity="false" level="debug">
+            <AppenderRef ref="zipkin"/>
+        </logger>
+    </Loggers>
+
+</Configuration>
