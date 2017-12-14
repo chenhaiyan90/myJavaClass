@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title> Leader Demo Chat Widget</title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="css/chat-widget.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="chat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row text-center" style="padding-top: 40px;">
+            <div class="col-md-12">
+                <h3>Robot + You </h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row " style="padding-top: 40px;">
+
+
+                <div class=" col-lg-4 col-md-4 col-sm-4 col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-xs-12" id="widget-main">
+                    <div class="panel panel-info chat-widget-main" >
+                        <div class="panel-heading">
+                            <h5>RECENT CHAT HISTORY</h5>
+                        </div>
+                        <div class="panel-body" id="chat-main">
+                          </div>
+                 <input  class="text" type="text" id="mywords"/><input id="sendBtn" type="button" value="Send"/>
+                    </div>
+                </div>
+
+            </div>
+            
+        </div>
+       
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!--  bootstrap-table -->
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap-table-locale-all.min.js"></script>
+    <script src="student-list.js"></script>
+</head>
+<body>
+  <label class="col-md-4 control-label" for="button1id">过滤</label>
+  <div class="col-md-8">
+    <button id="allstudentbtn" name="allstudentbtn" class="btn btn-success">全部名单</button>
+    <button id="noldcassbtn" name="noldcassbtn" class="btn btn-danger"  >无班级</button>
+  <div id='response'></div>
+  </div>
+<table id="student-table" data-toggle="table" data-url="students/list?onlynoclasses=false">
+    <thead>
+        <tr>
+            <th data-field="id">ID</th>
+            <th data-field="qq">QQ</th>
+            <th data-field="name">姓名</th>
+            <th data-field="email">邮箱</th>
+            <th data-field="phone">电话</th>
+            <th data-field="sex">性别</th>
+            <th data-field="education">学历</th>
+            <th data-field="workYear">经验</th>
+            <th data-field="company">公司</th>
+            <th data-field="weixin">微信</th>
+            <th >操作</th>
+        </tr>
+    </thead>
+</table>
+</body>
+</html>

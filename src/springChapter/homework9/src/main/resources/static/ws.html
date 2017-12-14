@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8" />  
+<title>web socket</title>  
+</head>  
+<body>  
+<h1>web socket</h1>  
+<script type="text/javascript">  
+    var url = 'ws://'+window.location.hostname+':8080/web/robot';  
+    var ws = new WebSocket(url);    
+    ws.onopen = function(event)  
+    {    
+        ws.send('hello');    
+    };    
+      
+    ws.onmessage = function(event) {  
+        alert(event.data);  
+    };  
+      
+    ws.onerror = function(event) {  
+        alert(event);  
+    }  
+</script>  
+</body>  
+</html>  

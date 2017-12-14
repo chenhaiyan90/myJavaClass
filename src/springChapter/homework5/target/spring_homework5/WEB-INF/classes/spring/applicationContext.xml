@@ -1,10 +1,15 @@
 <?xml version = "1.0" encoding = "UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd 
         http://www.springframework.org/schema/context 
-    http://www.springframework.org/schema/context/spring-context.xsd" default-lazy-init="true">
+    http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.2.xsd"
+
+	   default-lazy-init="true">
 	<bean id="propertyConfigurer"
 		  class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="fileEncoding" value="UTF-8"/>
@@ -41,7 +46,23 @@
 	<bean id="commonJdbcTemplate" class="com.spring.common.config.JdbcTemplate">
 		<property name="dataSource" ref="commonDataSource"/>
 	</bean>
+	<!-- 定义开发的profile -->
+	<beans profile="development">
+		<!-- 只扫描开发环境下使用的类 -->
+		<context:component-scan base-package="com.spring.demo5.messageEvent.service.dev" />
+		<!-- 加载开发使用的配置文件 -->
+		<!--<util:properties id="config" location="classpath:dev/config.properties"/>-->
+	</beans>
 
-	<context:component-scan base-package="com.spring.demo5" />
+	<!-- 定义生产使用的profile -->
+	<beans profile="produce">
+		<!-- 只扫描生产环境下使用的类 -->
+		<context:component-scan
+				base-package="com.spring.demo5.messageEvent.service.production,com.spring.demo5.messageEvent.bean" />
+		<!-- 加载生产使用的配置文件 -->
+		<!--<util:properties id="config" location="classpath:produce/config.properties"/>-->
+	</beans>
+
+	<!--<context:component-scan base-package="com.spring.demo5" />-->
 
 </beans>

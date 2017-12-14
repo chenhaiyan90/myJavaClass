@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+ <!--  bootstrap-table -->
+    <!--<script src="js/jqBootstrapValidation.js"></script>-->
+    <script src="js/urlparam.js"></script>
+     <script src="js/bootbox.min.js"></script>
+     <script src="js/main.js"></script>
+    <script src="assine-ldclass.js"></script>
+</head>
+<body>
+
+<form class="form-horizontal" id="assginform" data-async  method="post" role="form">
+<fieldset>
+
+<!-- Form Name -->
+<legend id="assinInf">分配班级</legend>
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="classIdSelect">分配班级</label>
+  <div class="col-md-4">
+    <select id="classIdSelect" name="classId" class="form-control" required>
+     <option value="">...</option>
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="reason">原因</label>
+  <div class="col-md-4">
+    <select id="reason" name="reason" class="form-control" required>
+     <option value="">...</option>
+      <option value="1">正常</option>
+      <option value="2">插班</option>
+      <option value="3">转学</option>
+      <option value="4">留级</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="seasonInput">第几季</label>  
+  <div class="col-md-4">
+  <input id="seasonInput" name="season" type="text"   class="form-control input-md" required min=1 max=6>
+  <span class="help-block">如果不是正常新班，填写插班课程的季度，</span>  
+  </div>
+</div>
+
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">说明</label>  
+  <div class="col-md-4">
+  <input id="textinput" name="theNote" type="text" placeholder="新报" class="form-control input-md" required >
+  <span class="help-block">原因说明</span>  
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="button1id"></label>
+  <div class="col-md-8">
+    <button id="cancelbt" name="button1id" type="button" class="btn btn-success">放弃</button>
+    <button id="button2id" name="button2id" class="btn btn-danger" value="Submit">确定</button>
+  <div id='response'></div>
+  </div>
+</div>
+
+</fieldset>
+</form>
+</body>
+</html>

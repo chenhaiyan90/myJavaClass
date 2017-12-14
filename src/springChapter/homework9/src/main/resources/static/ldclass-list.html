@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!--  bootstrap-table -->
+    <script src="js/bootstrap-table.min.js"></script>
+    <script src="js/bootstrap-table-locale-all.min.js"></script>
+    <script src="ldclass-list.js"></script>
+    
+</head>
+<body>
+<table data-toggle="table" data-url="/ldclasslist">
+    <thead>
+        <tr>
+            <th data-field="classId">ID</th>
+            <th data-field="className">班级名称</th>
+            <th data-field="monitorName">班长</th>
+            <th data-field="commissaryName">学习委员</th>
+            <th data-field="curNormalStudents">学员总数</th>
+            <th data-field="curArrearagedStudents">欠费总数</th>
+            <th data-field="dropedStudents">退学总数</th>
+            <th data-formatter="linkFormatter">操作</th>
+        </tr>
+    </thead>
+</table>
+</body>
+</html>
